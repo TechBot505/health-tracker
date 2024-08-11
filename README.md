@@ -10,8 +10,17 @@ Health Challenge Tracker is designed to help users efficiently track their worko
 
 ## Key Features
 * **Workout Form:** Users can log their workout details by providing their name, selecting a workout type, and specifying the duration.
+
+  ![Screenshot (534)](https://github.com/user-attachments/assets/a611c739-5eca-4bda-b8ba-7e7f111cf567)
+
 * **Workout Dashboard:** Displays a comprehensive list of all workouts with options to search, filter, and paginate through entries.
+
+  ![Screenshot (535)](https://github.com/user-attachments/assets/dd62f5b1-1f00-4487-a01a-e4de6343df6c)
+  
 * **Progress Visualization:** Awesome charts allow users to see their workout progress over time.
+  
+  ![Screenshot (536)](https://github.com/user-attachments/assets/db4aae1a-5a9c-447d-8a45-6a10733beba6)
+  
 * **Responsive UI:** The application is optimized for both desktop and mobile devices, ensuring a seamless experience across all platforms.
 * **Local Data Storage:** User workout data is saved in the browser's local storage, preserving data across sessions.
 
