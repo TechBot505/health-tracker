@@ -1,4 +1,4 @@
-import { User } from "../interfaces/user";
+import { User } from "../app/interfaces/user";
 
 export const Users: User[] = [
   {

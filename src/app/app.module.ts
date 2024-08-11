@@ -9,6 +9,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChartsComponent } from './components/charts/charts.component';
+import { AgCharts } from 'ag-charts-angular';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +19,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     NavbarComponent,
     FooterComponent,
     FormComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    AgCharts
   ],
   providers: [],
   bootstrap: [AppComponent]
