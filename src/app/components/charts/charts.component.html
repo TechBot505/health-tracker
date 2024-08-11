@@ -1,1 +1,53 @@
-<p>charts works!</p>
+<main
+  class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5"
+>
+  <div
+    class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden"
+    style="max-width: 1000px"
+  >
+    <div class="flex w-full">
+      <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+        <ul *ngFor="let user of paginatedUsers" class="bg-white shadow overflow-hidden sm:rounded-md max-w-sm mx-auto mt-2">
+          <li class="cursor-pointer" (click)="onClick(user)">
+              <div class="px-2 py-2 sm:px-6">
+                  <div class="flex items-center justify-between">
+                      <h3 class="text-lg leading-6 font-medium text-gray-900">{{user.name}}</h3>
+                  </div>
+              </div>
+          </li>
+      </ul>
+      </div>
+        <ag-charts [options]="chartOptions" style="width: 70vh; height: 50vh" />
+    </div>
+
+    <div class="my-6 flex justify-center items-center flex-wrap max-[500px]:flex-col">
+      <div>
+      <button
+        (click)="goToPage(currentPage - 1)"
+        [disabled]="currentPage === 1"
+        class="px-3 py-1 mx-2 mb-2 md:mb-0 border rounded-md cursor-pointer disabled:opacity-50"
+      >
+        &lt;&lt; Previous
+      </button>
+      <button
+        *ngFor="let page of pagesArray"
+        (click)="goToPage(page)"
+        [class.bg-indigo-500]="currentPage === page"
+        [class.text-white]="currentPage === page"
+        class="px-3 py-1 mx-2 mb-2 md:mb-0 border rounded-md cursor-pointer"
+      >
+        {{ page }}
+      </button>
+      <button
+        (click)="goToPage(currentPage + 1)"
+        [disabled]="currentPage === pagesArray.length"
+        class="px-3 py-1 mx-2 mb-2 md:mb-0 border rounded-md cursor-pointer disabled:opacity-50"
+      >
+        Next &gt;&gt;
+      </button>
+    </div>
+    </div>
+
+
+  </div>
+</main>

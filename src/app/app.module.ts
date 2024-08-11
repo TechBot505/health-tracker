@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChartsComponent } from './components/charts/charts.component';
-import { AgCharts } from 'ag-charts-angular';
+import { AgChartsModule } from 'ag-charts-angular';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { AgCharts } from 'ag-charts-angular';
     AppRoutingModule,
     MatIconModule,
     FormsModule,
-    AgCharts
+    AgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
