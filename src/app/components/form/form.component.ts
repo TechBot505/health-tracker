@@ -1,5 +1,6 @@
+import { WorkoutService } from './../../services/workout.service';
 import { Component } from '@angular/core';
-import { Workout } from '../../interfaces/workout';
+import { Form } from '../../interfaces/form';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,21 +9,16 @@ import { Router } from '@angular/router';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-  workout: Workout = {
-    userName: '',
-    age: null as number | null,
+  workout: Form = {
+    name: '',
     workoutType: 'Basketball',
     workoutMinutes: null as number | null
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private workoutService: WorkoutService) {}
 
   onSubmit(form: any) {
-    if (form.valid) {
-      const workouts = JSON.parse(localStorage.getItem('workouts') || '[]');
-      workouts.push(this.workout);
-      localStorage.setItem('workouts', JSON.stringify(workouts));
-      this.router.navigate(['/dashboard']);
-    }
+    this.workoutService.addUserToLocalStorage(form, this.workout);
+    this.router.navigate(['/dashboard']);
   }
 }
