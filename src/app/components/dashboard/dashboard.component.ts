@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
-import { Users } from '../../assets/dummy-data';
+import { Users } from '../../../assets/dummy-data';
 import { WorkoutService } from '../../services/workout.service';
 
 @Component({
